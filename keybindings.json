@@ -107,5 +107,17 @@
         "key": "alt+left",
         "command": "-workbench.action.terminal.focusPreviousPane",
         "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "workbench.action.splitEditorRight"
+    },
+    {
+        "key": "ctrl+k ctrl+\\",
+        "command": "-workbench.action.splitEditorRight"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "workbench.action.terminal.splitInActiveWorkspace"
     }
 ]

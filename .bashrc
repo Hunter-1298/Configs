@@ -91,6 +91,10 @@ fi
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
+# Change cd to always ls after
+function cd() {
+    builtin cd "$@" && ls -CF --color=auto
+}
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -115,7 +119,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-LS_COLORS=$LS_COLORS:'rs=0:di=01;34;4:ln=38;5;51'
+#LS_COLORS=$LS_COLORS:'rs=0:di=01;34;4:ln=38;5;51'
+export LS_COLORS="di=38;5;111:ln=38;5;75:so=38;5;197:pi=38;5;197:ex=38;5;197:bd=38;5;111:cd=38;5;111:su=38;5;197:sg=38;5;197:tw=38;5;197:ow=38;5;197"
 alias ssh='sshpass -f ~/.ssh/pass_file ssh'
 
 # Show git branch name

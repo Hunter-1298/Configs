@@ -143,3 +143,19 @@ unset color_prompt force_color_prompt
 
 
 
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/tmp/_MEIf5ngL3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/tmp/_MEIf5ngL3/etc/profile.d/conda.sh" ]; then
+        . "/tmp/_MEIf5ngL3/etc/profile.d/conda.sh"
+    else
+        export PATH="/tmp/_MEIf5ngL3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
